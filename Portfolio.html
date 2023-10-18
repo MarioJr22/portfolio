@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+        <img src="images/logo.png" class="logo">
+        <ul>
+           <li><a href="#header">Home</a> </li>
+           <li><a href="#about">About Me</a> </li>
+           <li><a href="#activity">My Activities</a> </li>
+         
+        </ul>
+    </nav>
+    <div class="header-text">
+    <p>BSIT Student</p>
+    <h1>Hello, I'm <span>Mario Jr.</span></h1>
+</div>
+</div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container"><div class="row">
+        
+        <div class="about-col-1">
+            <img src="images/pic.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="aboutme">
+                I'm a student that is a curious and dedicated individual on a learning journey, whether it's in a classroom, online, or through practical experiences. Students vary widely in age, background, and interests, united by their quest for knowledge and personal growth. They play a vital role in our education systems, constantly absorbing, questioning, and applying information to expand their horizons and develop essential skills. Students are the future leaders, innovators, and change-makers of society, and their dedication to learning is the driving force behind progress and enlightenment.</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('hobby')">Hobby</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Technical</span><br>Computer troubleshooting </li>
+                    <li><span>Photoshop</span><br>Photo Editing </li>
+                    
+                </ul>
+            </div>
+            <div class="tab-contents" id="hobby">
+                <ul>
+                    <li><span>Sports</span><br>Basketball </li>
+                    <li><span>Activity</span><br>Motorcyle Rides </li>
+                  
+                </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+<!-----------services------------>
+<div id="activity">
+    <div>   
+        <h1 class="sub-titles">Activities</h1>
+        <li class="act1"><a href="Activity 1.html" class="act2">Activitiy 1</a></a></li>
+    </div>
+
+</div>
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+
+
+</body>
+
+</html>
